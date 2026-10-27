@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root{font-family:'DM Sans',sans-serif;color:#1c2923;background:#faf7f2;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;min-width:320px}
+button,a,input,textarea{font:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed}
+a{text-decoration:none}
+.font-display{font-family:'Manrope','DM Sans',sans-serif}
+.section-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:13px;font-size:10px;font-weight:800;letter-spacing:.18em;color:#c17e50}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.qty-btn{display:grid;place-items:center;width:29px;height:29px;border-radius:999px;background:#f5eee6;color:#1d2924;transition:background .2s}
+.qty-btn:hover{background:#f1ddc9}
+.mode-btn{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;padding:13px 16px;border:1px solid #e6ded3;border-radius:12px;background:white;font-size:13px;font-weight:800}
+.mode-btn.is-active{border-color:#20342a;background:#20342a;color:white}
+.choice-btn{border:1px solid #e5dacf;border-radius:12px;background:white;padding:11px 14px;font-size:12px;font-weight:700;color:#544f49}
+.choice-btn.selected{border-color:#ed5035;background:#fff0eb;color:#e14d32}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes slide-left{from{transform:translateX(30px);opacity:.5}to{transform:translateX(0);opacity:1}}
+.animate-fade{animation:fade-in .2s ease-out both}
+.animate-slide{animation:slide-left .24s cubic-bezier(.2,.8,.2,1) both}
+@media(max-width:640px){html{scroll-padding-top:85px} .animate-slide{animation-duration:.2s}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
